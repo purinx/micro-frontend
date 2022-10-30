@@ -10,5 +10,6 @@ export const Header = chakra('div', {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    boxShadow: 'base',
   },
 });

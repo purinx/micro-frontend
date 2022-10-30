@@ -34,6 +34,16 @@
           <application name="@micro-frontend/wallet"></application>
         </route>
       -->
+      <route path="micro-frontend/weather">
+        <section style="background:white;">
+          <h2>Weather</h2>
+        </section>
+      </route>
+      <route path="micro-frontend/other">
+        <section style="background:#ccc;">
+          <h2>Other</h2>
+        </section>
+      </route>
       <route default>
         <application name="@micro-frontend/dashboard" loader="dashboard" error="dashboard"></application>
       </route>
@@ -51,6 +61,20 @@
     }
     h1, h2, h3, h4, p, span, div {
       color: #a4f44b;
+    }
+    h2 {
+      font-size: 24px;
+    }
+    section {
+      height: calc(100vh - 44px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media(min-width: 530px) {
+      section {
+        margin-left: 200px;
+      }
     }
   </style>
 </body>

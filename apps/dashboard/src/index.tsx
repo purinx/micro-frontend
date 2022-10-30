@@ -2,10 +2,12 @@ import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import singleSpaReact from 'single-spa-react';
+
 import { Dashboard } from './dashboard.component';
+import { dashboardTheme } from './theme';
 
 const Root = () => (
-  <ChakraProvider>
+  <ChakraProvider theme={dashboardTheme}>
     <Dashboard />
   </ChakraProvider>
 );

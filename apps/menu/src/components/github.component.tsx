@@ -7,6 +7,11 @@ export const Github = () => (
     display="flex"
     alignItems="center"
     href="https://github.com/caburchin/micro-frontend"
+    sx={{
+      path: {
+        fill: '#fff',
+      },
+    }}
   >
     <svg
       height="32"

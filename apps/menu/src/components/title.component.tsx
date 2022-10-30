@@ -5,6 +5,6 @@ export const Title = chakra('h1', {
     display: 'flex',
     fontSize: '24px',
     lineHeight: '100%',
-    padding: '10px 20px',
+    padding: '10px',
   },
 });

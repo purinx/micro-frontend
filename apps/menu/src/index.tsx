@@ -2,10 +2,12 @@ import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import singleSpaReact from 'single-spa-react';
+
 import { Menu } from './menu.component';
+import { menuTheme } from './theme';
 
 const Root = () => (
-  <ChakraProvider>
+  <ChakraProvider theme={menuTheme}>
     <Menu />
   </ChakraProvider>
 );

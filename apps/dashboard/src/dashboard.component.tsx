@@ -4,7 +4,11 @@ import { Title } from './components/title.component';
 
 export const Dashboard: FunctionComponent = () => {
   return (
-    <Center width="100%" height="calc(100vh - 44px)">
+    <Center
+      width={{ base: '100%', md: 'calc(100% - 200px)' }}
+      height="calc(100vh - 44px)"
+      ml={{ base: '0', md: '200px' }}
+    >
       <Title>Dashboard</Title>
     </Center>
   );
