@@ -1,0 +1,19 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><title>Caburchin's Micro Frontend App</title><meta name="importmap-type" content="systemjs-importmap"/><script type="systemjs-importmap">{
+      "imports": {
+        "react": "https://cdn.jsdelivr.net/npm/react@18.2.0/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.2.0/umd/react-dom.production.min.js",
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.4/lib/system/single-spa.min.js",
+        "@micro-frontend/shell": "https://caburchin.github.io/micro-frontend/micro-frontend-shell.js",
+        "@micro-frontend/dashboard": "https://caburchin.github.io/micro-frontend/@micro-frontend/dashboard/micro-frontend-dashboard.js",
+        "@micro-frontend/menu": "https://caburchin.github.io/micro-frontend/@micro-frontend/menu/micro-frontend-menu.js"
+      }
+    }</script><script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script><template id="single-spa-layout"><single-spa-router><nav class="topnav"><application name="@micro-frontend/menu" loader="menu" error="menu"></application></nav><route path="micro-frontend/weather"><section><h2>Weather</h2></section></route><route path="micro-frontend/other"><section><h2>Other</h2></section></route><route default><application name="@micro-frontend/dashboard" loader="dashboard" error="dashboard"></application></route></single-spa-router></template></head><body><script>System.import('@micro-frontend/shell');</script><style>body {
+      height: '100vh';
+      background: #555;
+    }
+    h1, h2, h3, h4, p, span, div {
+      color: #a4f44b;
+    }
+    h2 {
+      font-size: 24px;
+    }</style></body></html>
