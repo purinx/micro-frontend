@@ -1,9 +1,10 @@
-import { chakra } from "@chakra-ui/system";
+import { chakra } from '@chakra-ui/system';
 
-export const Title = chakra("div", {
+export const Title = chakra('h1', {
   baseStyle: {
-    fontSize: "24px",
-    lineHeight: "100%",
-    padding: "10px 20px",
+    display: 'flex',
+    fontSize: '24px',
+    lineHeight: '100%',
+    padding: '10px 20px',
   },
 });

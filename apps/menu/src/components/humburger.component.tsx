@@ -8,7 +8,7 @@ export const Hamburger: FunctionComponent = () => {
   const disclosure = useDisclosure();
 
   return (
-    <Center cursor="pointer" onClick={disclosure.onOpen}>
+    <Center cursor="pointer" onClick={disclosure.onOpen} padding="10px">
       <HamburgerIcon />
     </Center>
   );
