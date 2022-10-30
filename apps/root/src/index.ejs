@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Caburchin's App</title>
+  <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/systemjs-babel@0.3.1/dist/systemjs-babel.js"></script>
+  <template id="single-spa-layout">
+    <single-spa-router>
+      <nav class="topnav">
+        <application name="micro-frontend/menu" loader="menu" error="menu"></application>
+      </nav>
+      <!-- Add Some Root
+        <route path="people">
+          <application name="@"></application>
+        </route>
+        <route path="planets">
+          <application name="@react-mf/planets"></application>
+        </route>
+      -->
+      <route default>
+        <application name="micro-frontend/dashboard" loader="dashboard" error="dashboard"></application>
+      </route>
+    </single-spa-router>
+  </template>
+</head>
+<body>
+  <script>
+    System.import('./root-config.ts');
+  </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "root",
+  "version": "1.0.0",
+  "description": "Micro Frontend App Root",
+  "main": "index.js",
+  "repository": "https://github.com/caburchin/micro-frontend.git",
+  "author": "Yutaro Kijima",
+  "license": "MIT",
+  "dependencies": {
+    "single-spa": "^5.9.4",
+    "single-spa-layout": "^2.1.0",
+    "systemjs": "^6.13.0",
+    "systemjs-babel": "^0.3.1"
+  },
+  "devDependencies": {
+    "@types/systemjs": "^6.1.1",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack-config-single-spa": "^5.2.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
