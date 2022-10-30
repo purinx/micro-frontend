@@ -2,7 +2,7 @@
       "imports": {
         "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.4/lib/system/single-spa.min.js",
         "@micro-frontend/shell": "https://caburchin.github.io/micro-frontend/micro-frontend-shell.js",
-        "@micro-frontend/dashboard": "https://caburchin.github.io/micro-frontend/@micro-frontend/dashboard/main.js",
-        "@micro-frontend/menu": "https://caburchin.github.io/micro-frontend/@micro-frontend/menu/main.js"
+        "@micro-frontend/dashboard": "https://caburchin.github.io/micro-frontend/@micro-frontend/dashboard/micro-frontend-dashboard.js",
+        "@micro-frontend/menu": "https://caburchin.github.io/micro-frontend/@micro-frontend/menu/micro-frontend-menu.js"
       }
     }</script><script src="https://cdn.jsdelivr.net/npm/import-map-overrides@2.2.0/dist/import-map-overrides.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/system.min.js"></script><script src="https://cdn.jsdelivr.net/npm/systemjs@6.8.3/dist/extras/amd.min.js"></script><template id="single-spa-layout"><single-spa-router><nav class="topnav"><application name="@micro-frontend/menu" loader="menu" error="menu"></application></nav><route default><application name="@micro-frontend/dashboard" loader="dashboard" error="dashboard"></application></route></single-spa-router></template></head><body><script>System.import('@micro-frontend/shell');</script></body></html>
