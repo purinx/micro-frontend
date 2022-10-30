@@ -1,10 +1,10 @@
-const { merge } = require("webpack-merge");
-const singleSpaDefaults = require("webpack-config-single-spa-react");
+const { merge } = require('webpack-merge');
+const singleSpaDefaults = require('webpack-config-single-spa-react');
 
 module.exports = (webpackConfigEnv) => {
   const defaultConfig = singleSpaDefaults({
-    orgName: "micro-frontend",
-    projectName: "dashboard",
+    orgName: 'micro-frontend',
+    projectName: 'menu',
     webpackConfigEnv,
   });
 
@@ -16,15 +16,11 @@ module.exports = (webpackConfigEnv) => {
           test: /\.tsx?$/,
           use: 'ts-loader',
           exclude: /node_modules/,
-        }
-      ]
+        },
+      ],
     },
-    test: /\.tsx?$/,
-    use: 'ts-loader',
-    exclude: /node_modules/,
-    output: {
-      filename: 'menu.bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+    resolve: {
+      extensions: ['.tsx', '.ts', '.js'],
     },
   });
 };

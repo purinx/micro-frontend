@@ -2,7 +2,7 @@ import { ChakraProvider } from '@chakra-ui/react';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import singleSpaReact from 'single-spa-react';
-import { Dashboard } from './Dashboard';
+import { Dashboard } from './dashboard.component';
 
 const Root = () => (
   <ChakraProvider>
@@ -10,7 +10,7 @@ const Root = () => (
   </ChakraProvider>
 );
 
-export default singleSpaReact({
+const lifecycles = singleSpaReact({
   React,
   ReactDOM,
   rootComponent: Root,
@@ -24,3 +24,7 @@ export default singleSpaReact({
     );
   },
 });
+
+export const bootstrap = lifecycles.bootstrap;
+export const mount = lifecycles.mount;
+export const unmount = lifecycles.unmount;

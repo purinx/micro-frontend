@@ -4,7 +4,6 @@ import {
   constructLayoutEngine,
 } from "single-spa-layout";
 import { registerApplication, start } from "single-spa";
-import "systemjs-babel";
 
 const routes = constructRoutes(document.querySelector("#single-spa-layout"), {
   loaders: {
@@ -22,15 +21,13 @@ const applications = constructApplications({
   routes,
   loadApp: ({ name }) => System.import(name),
 });
-// Delay starting the layout engine until the styleguide CSS is loaded
+
 const layoutEngine = constructLayoutEngine({
   routes,
   applications,
-  active: false,
 });
 
 applications.forEach(registerApplication);
 
-// Activate the layout engine once the styleguide CSS is loaded
 layoutEngine.activate();
 start();

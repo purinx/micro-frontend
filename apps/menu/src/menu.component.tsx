@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from "react";
-import { Hamburger } from "./components/Hamburger";
-import { Header } from "./components/Header";
-import { Title } from "./components/Title";
+import { Hamburger } from "./components/humburger.component";
+import { Header } from "./components/header.component";
+import { Title } from "./components/title.component";
 
 export const Menu: FunctionComponent = () => {
   return (

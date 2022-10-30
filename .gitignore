@@ -1,3 +1,4 @@
 node_modules
 yarn-error.log
 dashboard.bundle.js
+dist

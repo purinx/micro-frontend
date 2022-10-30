@@ -1,0 +1,34 @@
+{
+  "name": "@micro-frontend/shell",
+  "version": "1.0.0",
+  "description": "Micro Frontend App Root",
+  "repository": "https://github.com/caburchin/micro-frontend.git",
+  "author": "Yutaro Kijima",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve",
+    "start:standalone": "webpack serve --env standalone",
+    "build": "webpack --mode=production",
+    "analyze": "webpack --mode=production --env analyze",
+    "format": "prettier --write .",
+    "deploy": "gh-pages --add --dist ./dist --dest ."
+  },
+  "dependencies": {
+    "process": "^0.11.10",
+    "single-spa": "^5.9.4",
+    "single-spa-layout": "^2.1.0",
+    "systemjs": "^6.13.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@types/systemjs": "^6.1.1",
+    "gh-pages": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "ts-loader": "^9.4.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.10.0",
+    "webpack-config-single-spa": "^5.2.0",
+    "webpack-merge": "^5.8.0"
+  }
+}
