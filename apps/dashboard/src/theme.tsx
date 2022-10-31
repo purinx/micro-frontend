@@ -1,13 +1,15 @@
 import { extendTheme } from '@chakra-ui/react';
-import { createBreakpoints } from '@chakra-ui/theme-tools';
 
 export const dashboardTheme = extendTheme({
   global: {},
   colors: {
-    black: 'rgba(0,0,0,0.6)',
-    primary: '#a4f44b',
-    secondary: '#a4caf1',
-    normal: '#ccc',
+    dashboard: {
+      black: 'rgba(0,0,0,0.6)',
+      primary: '#2aaf2f',
+      secondary: '#a4caf1',
+      normal: '#ccc',
+      back: '',
+    },
   },
   breakpoints: {
     sm: '370px',

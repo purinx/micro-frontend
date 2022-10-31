@@ -1,9 +1,8 @@
 import { chakra } from '@chakra-ui/react';
 
-export const Title = chakra('h2', {
+export const CardHeading = chakra('h3', {
   baseStyle: {
-    fontSize: '32px',
+    fontSize: '24px',
     color: 'dashboard.primary',
-    textIndent: '1em',
   },
 });
