@@ -1,0 +1,40 @@
+{
+  "name": "@micro-frontend/auth",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yutaro Kijima<eddix.ibanez@outlook.jp>",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack serve --env standalone",
+    "build": "webpack --mode=production",
+    "analyze": "webpack --mode=production --env analyze",
+    "format": "prettier --write .",
+    "deploy": "gh-pages --add --dist ./dist --dest @micro-frontend/auth"
+  },
+  "dependencies": {
+    "@stitches/react": "^1.2.8",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "single-spa-react": "^5.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@types/node": "^18.11.9",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "dotenv": "^16.0.3",
+    "dotenv-webpack": "^8.0.1",
+    "eslint": "^8.26.0",
+    "generate-password": "^1.7.0",
+    "gh-pages": "^4.0.0",
+    "prettier": "^2.7.1",
+    "ts-loader": "^9.4.1",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-config-single-spa-react": "^4.0.3",
+    "webpack-dev-server": "^4.11.1",
+    "webpack-merge": "^5.8.0"
+  }
+}
