@@ -5,7 +5,6 @@ import { useSignIn } from '../../hooks/useAuth';
 const Background = chakra('div', {
   baseStyle: {
     paddingY: '40px',
-    backgroundColor: '#1f8fa1',
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -25,6 +24,9 @@ const Container = chakra('div', {
     flexDirection: 'column',
     padding: '50px',
     margin: 'auto',
+    '*': {
+      color: '#2aaf2f',
+    },
   },
 });
 
@@ -32,6 +34,7 @@ const Title = chakra('h1', {
   baseStyle: {
     fontSize: '32px',
     textAlign: 'center',
+    color: '#2aaf2f',
   },
 });
 
@@ -42,15 +45,31 @@ const Input = chakra('input', {
     height: '40px',
     width: '100%',
     color: '#2aaf2f',
+    px: '10px',
   },
 });
 
 const Label = chakra('label', {
   baseStyle: {
+    color: '#2aaf2f',
     fontSize: '18px',
     fontWeight: 'bold',
     marginTop: '20px',
-  }
+  },
+});
+
+const Button = chakra('button', {
+  baseStyle: {
+    color: 'white',
+    bgColor: '#2aaf2f',
+    borderRadius: '4px',
+    width: '200px',
+    height: '50px',
+    fontSize: '18px',
+    alignSelf: 'center',
+    mt: '20px',
+    fontWeight: 'bold',
+  },
 });
 
 export const SignInPage = () => {
@@ -67,6 +86,9 @@ export const SignInPage = () => {
           Password
           <Input value={props.password} onChange={(e) => props.setPassword(e.target.value)} />
         </Label>
+        <Button type="submit" onClick={props.handleLogin}>
+          Submit
+        </Button>
       </Container>
     </Background>
   );

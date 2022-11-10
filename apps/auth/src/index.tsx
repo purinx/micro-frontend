@@ -4,16 +4,19 @@ import singleSpaReact from 'single-spa-react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { SignInPage } from './components/pages/signin.component';
 import { UserProvider } from './hooks/useUser';
+import { ChakraProvider } from '@chakra-ui/react';
 
 const Root = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/micro-frontend/auth">
-        <Route path="signin" element={<SignInPage />} />
-        <Route path="home" element={<UserProvider>Home</UserProvider>} />
-      </Route>
-    </Routes>
-  </BrowserRouter>
+  <ChakraProvider>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/micro-frontend/auth">
+          <Route path="signin" element={<SignInPage />} />
+          <Route path="home" element={<UserProvider>Home</UserProvider>} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  </ChakraProvider>
 );
 
 const lifecycles = singleSpaReact({
