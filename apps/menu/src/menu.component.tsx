@@ -29,8 +29,8 @@ export const Menu: FunctionComponent = () => {
             <NavItem href="/micro-frontend" onClick={navigateToUrl}>
               Dashboard
             </NavItem>
-            <NavItem href="/micro-frontend/weather" onClick={navigateToUrl}>
-              Weather
+            <NavItem href="/micro-frontend/auth/signin" onClick={navigateToUrl}>
+              Sign In
             </NavItem>
             <NavItem href="/micro-frontend/other" onClick={navigateToUrl}>
               Other
