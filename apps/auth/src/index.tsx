@@ -7,16 +7,12 @@ import { UserProvider } from './hooks/useUser';
 
 const Root = () => (
   <BrowserRouter>
-    <Route path="/micro-frontend/auth">
-      <Routes>
-        <Route path="signin">
-          <SignInPage />
-        </Route>
-        <Route path="home">
-          <UserProvider>Home</UserProvider>
-        </Route>
-      </Routes>
-    </Route>
+    <Routes>
+      <Route path="/micro-frontend/auth">
+        <Route path="signin" element={<SignInPage />} />
+        <Route path="home" element={<UserProvider>Home</UserProvider>} />
+      </Route>
+    </Routes>
   </BrowserRouter>
 );
 

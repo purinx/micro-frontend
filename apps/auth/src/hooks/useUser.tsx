@@ -1,10 +1,10 @@
 import React, { Suspense, useContext } from 'react';
 import { createContext, PropsWithChildren } from 'react';
 import { User } from '@supabase/supabase-js';
+import { redirect } from 'react-router-dom';
 import { supabase } from '../supabase';
 import { useSuspense } from './useSuspense';
-import { Loading } from 'src/components/loading.component';
-import { redirect } from 'react-router-dom';
+import { Loading } from '../components/loading.component';
 
 const ref = {};
 

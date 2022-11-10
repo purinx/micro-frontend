@@ -1,9 +1,10 @@
 import React from 'react';
 import { chakra } from '@chakra-ui/react';
-import { useSignIn } from 'src/hooks/useAuth';
+import { useSignIn } from '../../hooks/useAuth';
 
 const Background = chakra('div', {
   baseStyle: {
+    paddingY: '40px',
     backgroundColor: '#1f8fa1',
     display: 'flex',
     justifyContent: 'center',
@@ -22,7 +23,7 @@ const Container = chakra('div', {
     width: '400px',
     display: 'flex',
     flexDirection: 'column',
-    padding: '50px 10px',
+    padding: '50px',
     margin: 'auto',
   },
 });
