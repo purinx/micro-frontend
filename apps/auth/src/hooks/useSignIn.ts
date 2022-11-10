@@ -1,5 +1,6 @@
 import { ButtonProps } from '@chakra-ui/react';
 import { useState } from 'react';
+import { redirect } from 'react-router-dom';
 import { supabase } from '../supabase';
 
 export const useSignIn = () => {
@@ -14,7 +15,7 @@ export const useSignIn = () => {
       setLoading(true);
       const { error } = await supabase.auth.signInWithPassword({ email, password });
       if (error) throw error;
-      alert('Check your email for the login link!');
+      redirect('/micro-frontend/auth/home')
     } catch (error: unknown) {
       alert(error);
     } finally {

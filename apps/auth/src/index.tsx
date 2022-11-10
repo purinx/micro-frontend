@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { SignInPage } from './components/pages/signin.component';
 import { UserProvider } from './hooks/useUser';
 import { ChakraProvider } from '@chakra-ui/react';
+import { HomePage } from './components/pages/home.component';
 
 const Root = () => (
   <ChakraProvider>
@@ -12,7 +13,14 @@ const Root = () => (
       <Routes>
         <Route path="/micro-frontend/auth">
           <Route path="signin" element={<SignInPage />} />
-          <Route path="home" element={<UserProvider>Home</UserProvider>} />
+          <Route
+            path="home"
+            element={
+              <UserProvider>
+                <HomePage />
+              </UserProvider>
+            }
+          />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -20,6 +20,7 @@ supabase.auth.admin
     email,
     password,
     user_metadata: { name: uname },
+    email_confirm: true,
   }) // @ts-ignore
   .then(({ data, error }) => {
     if (error) {

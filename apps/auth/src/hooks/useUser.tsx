@@ -5,6 +5,7 @@ import { redirect } from 'react-router-dom';
 import { supabase } from '../supabase';
 import { useSuspense } from './useSuspense';
 import { Loading } from '../components/loading.component';
+import { Background } from '../components/atoms';
 
 const ref = {};
 
@@ -23,9 +24,15 @@ const _UserProvider = ({ children }: PropsWithChildren) => {
 };
 
 export const UserProvider = ({ children }: PropsWithChildren) => (
-  <Suspense fallback={<Loading width="100%" height="100%" />}>
+  <Suspense
+    fallback={
+      <Background>
+        <Loading width="100%" height="100%" />
+      </Background>
+    }
+  >
     <_UserProvider>{children}</_UserProvider>
   </Suspense>
 );
 
-export const useUser = () => useContext(Context);
+export const useUser = () => useContext(Context) as User;

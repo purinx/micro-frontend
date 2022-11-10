@@ -8,11 +8,17 @@ export const useSuspense = <T extends any[], U>(
   ...params: T
 ) => {
   if (!ref.suspender) {
-    ref.suspender = f(...params).then((result) => {
-      ref.result = result;
-    });
+    ref.suspender = f(...params)
+      .then((result) => {
+        console.log(result);
+        ref.result = result;
+      })
+      .catch((e) => {
+        ref.error = e;
+      });
   }
   if (ref.error) {
+    console.error(ref.error);
     throw ref.error;
   }
   if (ref.result) {
