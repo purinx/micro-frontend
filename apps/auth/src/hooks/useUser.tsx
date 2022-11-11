@@ -1,7 +1,7 @@
 import React, { Suspense, useContext } from 'react';
 import { createContext, PropsWithChildren } from 'react';
 import { User } from '@supabase/supabase-js';
-import { redirect } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { supabase } from '../supabase';
 import { useSuspense } from './useSuspense';
 import { Loading } from '../components/loading.component';
@@ -9,18 +9,23 @@ import { Background } from '../components/atoms';
 
 const ref = {};
 
-const Context = createContext<User | null>(null);
+const Context = createContext<User>({} as never);
 
 const _UserProvider = ({ children }: PropsWithChildren) => {
+  const navigate = useNavigate();
   const {
     data: { user },
-  } = useSuspense(supabase.auth.getUser, ref);
+  } = useSuspense(() => supabase.auth.getUser(), ref);
 
   if (!user) {
-    redirect('/micro-frontend/auth/signin');
+    alert('please sign in');
+    navigate('/micro-frontend/auth/signin');
+    return null;
   }
 
-  return <Context.Provider value={user}>{children}</Context.Provider>;
+  console.log(user);
+
+  return <Context.Provider value={user as User}>{children}</Context.Provider>;
 };
 
 export const UserProvider = ({ children }: PropsWithChildren) => (
